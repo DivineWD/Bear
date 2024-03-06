@@ -1,0 +1,160 @@
+@charset 'utf' -8;
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+/* reset end */
+
+header {
+    width: 100%;
+    border-bottom: 2px solid #9d7e36;
+}
+
+#Wrap {
+    width: 940px;
+    height: 140px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#logo {
+    text-align: center;
+    padding-top: 45px;
+}
+
+#gnbSub {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 10px;
+}
+
+#gnbSub li:nth-child(2) {
+    margin-top: 20px;
+}
+
+#tnb {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+#gnb {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#container {
+    width: 940px;
+
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slider .simg {
+
+    position: absolute;
+    display: flex;
+    justify-content: right;
+}
+
+.slider .simg a {
+
+    width: 100%;
+    height: 400px;
+    background: url(../images/mainBanner_201710310442383740.jpg);
+    display: block;
+}
+
+/* 1.a태그에게 background 이미지를 넣어줘야하는 이유:
+글릭을 해서 이동할 수 있는 면적이 넒어야하기 때문
+2.a태그는 기본적으로 inline속성이기 때문에  background 이미지 뿐만이 아니라, width,height값도 적응되지 않는다
+3.그렇기 때문에 a 태그에게 background속성을 줘야 할 경우 반드시 a태그에게 display:block 속성을 선행시켜서 블락요소로 만들어줘야한다.  */
+
+#containerWrap {
+    width: 940px;
+    margin: auto 0;
+}
+
+.mainrow1 {
+    width: 100%;
+}
+
+.mainrow1 div {
+    float: left;
+    height: 213px;
+}
+
+.mainrow1 #frch {
+    width: 205px;
+    margin-right: 35px;
+}
+
+.mainrow1 #hollysmall {
+    width: 460px;
+    margin-right: 35px;
+}
+
+.mainrow1 #store {
+    width: 205px;
+}
+
+/* .mainrow1 #hollysmall ul {
+
+} */
+
+.mainrow1 #hollysmall p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.mainrow1 #hollysmall ul li {
+    float: left;
+    background: url(../images/mall_bar01.gif) no-repeat right top;
+    padding: 10px 26px 0;
+    margin-top: 30px;
+}
+
+.mainrow1 #hollysmall ul li p {
+    text-align: center;
+}
+
+/* FLOAT를 쓰면 해당 FLOAT가 된 영역이 가사으로 팝업창처럼 뜨게 되므로 그 뜬 구간만큼 밑의 개체가 밀려 올라오는데 그걸 막아주는 것이 바로 clearfix */
+.mainrow1:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+/* CLEARFIX */
+
+#hollysmall ul li:last-child {
+    background: none;
+}
